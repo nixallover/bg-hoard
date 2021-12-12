@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": []
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": [
+    "src/**/*.d.ts",
+    "../../libs/store/feature-game-detail/src/index.ts"
+  ],
+  "exclude": ["**/*.test.ts", "**/*.spec.ts"]
+}
