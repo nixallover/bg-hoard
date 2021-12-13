@@ -19,9 +19,18 @@
         "message": "Which directory do you want the lib to be in?",
         "type": "list",
         "items": [
-          { "value": "store", "label": "store" },
-          { "value": "api", "label": "api" },
-          { "value": "shared", "label": "shared" }
+          {
+            "value": "api",
+            "label": "api"
+          },
+          {
+            "value": "store",
+            "label": "store"
+          },
+          {
+            "value": "shared",
+            "label": "shared"
+          }
         ]
       },
       "$default": {
