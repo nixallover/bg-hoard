@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Install Node Dependencies
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2 # checkout whatever branch the PR is using
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
@@ -17,14 +17,10 @@ jobs:
     runs-on: ubuntu-latest # the image our job will run on
     name: Test Store # the name that will appear on the Actions UI
     steps: # what steps it will perform
-      - uses: actions/checkout@v1 # checkout whatever branch the PR is using
-      - uses: bahmutov/npm-install@v1 # trigger an `npm install`
       - run: npm run nx test store # test the "store" project
   test-api:
     needs: install-deps
     runs-on: ubuntu-latest
     name: Test API
     steps:
-      - uses: actions/checkout@v1
-      - uses: bahmutov/npm-install@v1
       - run: npm run nx test api
