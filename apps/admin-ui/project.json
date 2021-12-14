@@ -51,7 +51,7 @@
       "executor": "@nrwl/workspace:run-commands",
       "outputs": [],
       "options": {
-        "command": "surge dist/apps/admin-ui/exported ${SURGE_DOMAIN_ADMIN_UI} --token ${SURGE_TOKEN}"
+        "command": "surge dist/apps/admin-ui ${SURGE_DOMAIN_ADMIN_UI} --token ${SURGE_TOKEN}"
       }
     }
   },

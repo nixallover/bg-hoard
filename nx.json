@@ -35,7 +35,8 @@
         "target": "build",
         "projects": "dependencies"
       }
-    ]
+    ],
+    "deploy": [{ "target": "build", "projects": "self" }]
   },
   "generators": {
     "@nrwl/angular:application": {
