@@ -10,7 +10,10 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -21,12 +24,19 @@
       "@bg-hoard/store/feature-game-detail": [
         "libs/store/feature-game-detail/src/index.ts"
       ],
-      "@bg-hoard/store/ui-shared": ["libs/store/ui-shared/src/index.ts"],
+      "@bg-hoard/store/ui-shared": [
+        "libs/store/ui-shared/src/index.ts"
+      ],
       "@bg-hoard/store/util-formatters": [
         "libs/store/util-formatters/src/index.ts"
       ],
-      "@bg-hoard/util-interface": ["libs/util-interface/src/index.ts"]
+      "@bg-hoard/util-interface": [
+        "libs/util-interface/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
