@@ -3,7 +3,7 @@ name: Deploy Website
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   SURGE_DOMAIN_STORE: ${{ secrets.SURGE_DOMAIN_STORE }}
@@ -17,6 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - uses: bahmutov/npm-install@v1.4.5
+      - uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'main' # remember to set this correctly
       - run: npm run nx build store -- --configuration=production
       - run: npm run nx build admin-ui -- --configuration=production
       - run: npm run nx deploy store
