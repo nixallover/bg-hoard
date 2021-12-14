@@ -90,6 +90,15 @@
         "jestConfig": "apps/store/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx build store",
+          "yarn surge dist/apps/store ${SURGE_DOMAIN_STORE} --token ${SURGE_TOKEN}"
+        ]
+      }
     }
   },
   "tags": ["scope:store", "type:app"]

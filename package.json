@@ -27,6 +27,7 @@
     "@nrwl/nx-cloud": "^13.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.4.0",
+    "surge": "^0.23.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },
